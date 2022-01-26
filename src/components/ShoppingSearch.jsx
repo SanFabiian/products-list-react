@@ -1,9 +1,11 @@
-import React from "react";
+import React, { useContext } from "react";
+import { ContextListProducts } from "../context/ContextListProducts";
 
-const ShoppingSearch = ({ inputValue, setInputValue }) => {
+const ShoppingSearch = () => {
+  const { inputValue, setInputValue } = useContext(ContextListProducts);
+
   const onSearchValue = (e) => {
     setInputValue(e.target.value);
-    console.log(e.target.value);
   };
 
   return (
